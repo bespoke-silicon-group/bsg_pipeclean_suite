@@ -1,0 +1,70 @@
+{
+  "version": "0.1",
+  "units": {
+    "xgrid": "cpp",
+    "ygrid": "track_height",
+    "xdist": "cpp",
+    "ydist": "track_height"
+  },
+  "diearea": {
+    "llx": 0,
+    "lly": 0,
+    "urx": 162,
+    "ury": 215
+  },
+  "designs": [
+    { "name": "chip_top",
+      "description": "8-bit multipler",
+      "power_grid": [
+        { "layer": "last_vertical_metal",
+          "direction": "vertical",
+          "nets": ["VDD", "VSS"],
+          "density": 0.70
+        },
+        { "layer": "last_horizontal_metal",
+          "direction": "horizontal",
+          "nets": ["VDD", "VSS"],
+          "density": 0.70
+        }
+      ],
+      "io_ports": [
+        { "name": "a_i[0]",  "width": 1, "height": 0.625, "x": 0,   "y": 10, "layer": "metal4" },
+        { "name": "a_i[1]",  "width": 1, "height": 0.625, "x": 0,   "y": 11, "layer": "metal4" },
+        { "name": "a_i[2]",  "width": 1, "height": 0.625, "x": 0,   "y": 12, "layer": "metal4" },
+        { "name": "a_i[3]",  "width": 1, "height": 0.625, "x": 0,   "y": 13, "layer": "metal4" },
+        { "name": "a_i[4]",  "width": 1, "height": 0.625, "x": 0,   "y": 14, "layer": "metal4" },
+        { "name": "a_i[5]",  "width": 1, "height": 0.625, "x": 0,   "y": 15, "layer": "metal4" },
+        { "name": "a_i[6]",  "width": 1, "height": 0.625, "x": 0,   "y": 16, "layer": "metal4" },
+        { "name": "a_i[7]",  "width": 1, "height": 0.625, "x": 0,   "y": 17, "layer": "metal4" },
+        { "name": "b_i[0]",  "width": 1, "height": 0.625, "x": 0,   "y": 18, "layer": "metal4" },
+        { "name": "b_i[1]",  "width": 1, "height": 0.625, "x": 0,   "y": 19, "layer": "metal4" },
+        { "name": "b_i[2]",  "width": 1, "height": 0.625, "x": 0,   "y": 20, "layer": "metal4" },
+        { "name": "b_i[3]",  "width": 1, "height": 0.625, "x": 0,   "y": 21, "layer": "metal4" },
+        { "name": "b_i[4]",  "width": 1, "height": 0.625, "x": 0,   "y": 22, "layer": "metal4" },
+        { "name": "b_i[5]",  "width": 1, "height": 0.625, "x": 0,   "y": 23, "layer": "metal4" },
+        { "name": "b_i[6]",  "width": 1, "height": 0.625, "x": 0,   "y": 24, "layer": "metal4" },
+        { "name": "b_i[7]",  "width": 1, "height": 0.625, "x": 0,   "y": 25, "layer": "metal4" },
+        { "name": "c_i[0]",  "width": 1, "height": 0.625, "x": 215, "y": 10, "layer": "metal4" },
+        { "name": "c_i[1]",  "width": 1, "height": 0.625, "x": 215, "y": 11, "layer": "metal4" },
+        { "name": "c_i[2]",  "width": 1, "height": 0.625, "x": 215, "y": 12, "layer": "metal4" },
+        { "name": "c_i[3]",  "width": 1, "height": 0.625, "x": 215, "y": 13, "layer": "metal4" },
+        { "name": "c_i[4]",  "width": 1, "height": 0.625, "x": 215, "y": 14, "layer": "metal4" },
+        { "name": "c_i[5]",  "width": 1, "height": 0.625, "x": 215, "y": 15, "layer": "metal4" },
+        { "name": "c_i[6]",  "width": 1, "height": 0.625, "x": 215, "y": 16, "layer": "metal4" },
+        { "name": "c_i[7]",  "width": 1, "height": 0.625, "x": 215, "y": 17, "layer": "metal4" },
+        { "name": "c_i[8]",  "width": 1, "height": 0.625, "x": 215, "y": 18, "layer": "metal4" },
+        { "name": "c_i[9]",  "width": 1, "height": 0.625, "x": 215, "y": 19, "layer": "metal4" },
+        { "name": "c_i[10]", "width": 1, "height": 0.625, "x": 215, "y": 20, "layer": "metal4" },
+        { "name": "c_i[11]", "width": 1, "height": 0.625, "x": 215, "y": 21, "layer": "metal4" },
+        { "name": "c_i[12]", "width": 1, "height": 0.625, "x": 215, "y": 22, "layer": "metal4" },
+        { "name": "c_i[13]", "width": 1, "height": 0.625, "x": 215, "y": 23, "layer": "metal4" },
+        { "name": "c_i[14]", "width": 1, "height": 0.625, "x": 215, "y": 24, "layer": "metal4" },
+        { "name": "c_i[15]", "width": 1, "height": 0.625, "x": 215, "y": 25, "layer": "metal4" },
+      ],
+      "srams": [],
+      "macros": [],
+      "placement_bounds": [],
+      "sensitive_nets": []
+    }
+  ]
+}
