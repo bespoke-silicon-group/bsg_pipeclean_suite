@@ -25,6 +25,16 @@
           "direction": "horizontal",
           "nets": ["VDD", "VSS"],
           "density": 0.70
+        },
+        { "layer": "metal-BV4",
+          "direction": "vertical",
+          "nets": ["VDD", "VSS"],
+          "density": 0.10
+        },
+        { "layer": "metal-BV2",
+          "direction": "vertical",
+          "nets": ["VDD", "VSS"],
+          "density": 0.03
         }
       ],
       "io_ports": [
