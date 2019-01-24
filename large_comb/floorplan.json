@@ -6,7 +6,7 @@
     "xdist": "cpp",
     "ydist": "track_height"
   },
-  "diearea": {
+  "die_area": {
     "llx": 0.0,
     "lly": 0.0,
     "urx": 1966,
@@ -542,7 +542,7 @@
         { "name": "c_i[255]" , "x": 590, "y": 265, "side": "right", "layer": "metal-BH2" }
       ],
       "srams": [],
-      "macros": [],
+      "place": [],
       "placement_bounds": [
         { "inst": "MULT/*",
           "llx": 2,
