@@ -3,7 +3,7 @@ BSG Pipeclean Suite
 This repository contains a collection of designs used to stress test new CAD
 flows. Each design stress a different aspect of the CAD flow.
 
-Every design comes with 3 main files: the design RTL, timing constraints, and
+Every design comes with 4 main files: the design RTL, timing constraints, a macro generation script, and
 floorplan constraints. The design RTL is written in synthesizable verilog. The
 design constraints are written as an SDC file with a dependancy on the FO4
 environment variable. Users should set the FO4 envionment variable to the FO4
