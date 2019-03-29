@@ -1,6 +1,6 @@
 export TOP_DIR := $(shell git rev-parse --show-toplevel)
 
-include $(TOP_DIR)/scripts/Makefile.include
+include $(TOP_DIR)/../basejump_idf_tools/Makefile.include
 
 #===============================================================================
 # Makefile
@@ -35,5 +35,5 @@ macro_generate: tools
 	$(PYTHON) macro_generate.py
 
 convert_idf_to_def: floorplan.idf.json tools
-	$(PYTHON) $(TOP_DIR)/scripts/idf_to_def.py -idf $< -tf $(TECHNOLOGY_FILE)
+	$(PYTHON) $(BASEJUMP_IDF_TOOLS_DIR)/idf_to_def/idf_to_def.py -idf $< -tf $(TECHNOLOGY_FILE)
 
