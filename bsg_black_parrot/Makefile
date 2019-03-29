@@ -28,15 +28,12 @@ HARD_V_FILES :=$(shell find hard/ -name *.v)
 
 .DEFAULT_GOAL=all
 
-all: finalize_rtl macro_generate convert_idf_to_def
+all: macro_generate convert_idf_to_def
 	@echo "All Done!"
-
-finalize_rtl: $(HARD_V_FILES) black_parrot.missing_hard.v
-	cat $^ > black_parrot.v
 
 macro_generate: tools
 	$(PYTHON) macro_generate.py
 
-convert_idf_to_def: floorplan.json tools
+convert_idf_to_def: floorplan.idf.json tools
 	$(PYTHON) $(TOP_DIR)/scripts/idf_to_def.py -idf $< -tf $(TECHNOLOGY_FILE)
 
