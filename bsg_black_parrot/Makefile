@@ -1,6 +1,6 @@
 export TOP_DIR := $(shell git rev-parse --show-toplevel)
 
-include $(TOP_DIR)/../basejump_idf_tools/Makefile.include
+include $(TOP_DIR)/../bsg_idf_tools/Makefile.include
 
 #===============================================================================
 # Makefile
