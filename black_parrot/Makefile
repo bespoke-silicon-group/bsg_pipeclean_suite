@@ -19,9 +19,6 @@ include $(TOP_DIR)/../bsg_idf_tools/Makefile.include
 # TODO: Set me to the path of your target process's technology (.tf) file
 TECHNOLOGY_FILE ?=
 
-# Create a list of all the verilog files in the hard directory
-HARD_V_FILES :=$(shell find hard/ -name *.v)
-
 #===============================================================================
 # MAIN TARGETS
 #===============================================================================
