@@ -30,14 +30,14 @@ module hard_mem_1rw_bit_mask_d64_w15_wrapper #( parameter width_p = 15
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
   reg [els_p-1:0][width_p-1:0] mem;
-  genvar i;
+  int i;
   always @(posedge clk_i)
     if (v_i)
       begin
@@ -90,14 +90,14 @@ module hard_mem_1rw_bit_mask_d64_w7_wrapper #( parameter width_p = 7
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
   reg [width_p-1:0] mem [els_p-1:0];
-  genvar i;
+  int i;
   always @(posedge clk_i)
     if (v_i)
       begin
@@ -150,14 +150,14 @@ module hard_mem_1rw_bit_mask_d64_w96_wrapper #( parameter width_p = 96
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
   reg [els_p-1:0][width_p-1:0] mem;
-  genvar i;
+  int i;
   always @(posedge clk_i)
     if (v_i)
       begin
@@ -211,14 +211,14 @@ module hard_mem_1rw_byte_mask_d512_w64_wrapper #( parameter width_p = 64
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
   reg [width_p-1:0] mem [els_p-1:0];
-  genvar i;
+  int i;
   always @(posedge clk_i)
     if (v_i)
       begin
@@ -270,7 +270,7 @@ module hard_mem_1rw_d256_w95_wrapper #( parameter width_p = 95
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
@@ -322,7 +322,7 @@ module hard_mem_1rw_d512_w64_wrapper #( parameter width_p = 64
   // synopsys translate_off
   initial
     begin
-      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.")
+      $display("## %m: to get the expect quality of results, this module should be replaced with the hardened equivalent.");
     end
   // synopsys translate_on
 
