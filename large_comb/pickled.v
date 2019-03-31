@@ -1,3 +1,13 @@
+// Name: Large Comb
+//
+// Description: 128-bit multiplier
+//
+// Top Module: chip_top
+//
+// GitHub: N/A
+//    commit: N/A
+//
+
 module multiplier #(parameter width_p="inv")
   ( input      [width_p-1:0] a_i
   , input      [width_p-1:0] b_i
