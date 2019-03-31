@@ -7,18 +7,18 @@
     "y": "track_height"
   },
   "area": {
-		"die": {
-			"llx": 0,
-			"lly": 0,
-			"urx": 9187,
-			"ury": 5243
-		},
-		"core": {
-			"llx": 214,
-			"lly": 214,
-			"urx": 8973,
-			"ury": 5029
-		}
+    "die": {
+      "llx": 0,
+      "lly": 0,
+      "urx": 9187,
+      "ury": 5243
+    },
+    "core": {
+      "llx": 214,
+      "lly": 214,
+      "urx": 8973,
+      "ury": 5029
+    }
   },
   "harden": {
     "srams": [
