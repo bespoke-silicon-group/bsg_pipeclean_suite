@@ -34,11 +34,10 @@ files. Each design should have the following file and directory structure:
 
 ```
 <design_name>
-+-- hard/
-|   +-- harden_me.v
 +-- Makefile
 +-- constraints.FO4.sdc
 +-- floorplan.idf.json
++-- harden_me.v
 +-- macro_generate.py
 +-- pickled.v
 ```
@@ -48,9 +47,9 @@ files. Each design should have the following file and directory structure:
 | Makefile             | Makefile to facilitate in running _macro_generate.py_ and [IDF-to-DEF converter](https://github.com/bespoke-silicon-group/bsg_idf_tools) utility script. |
 | constraints.FO4.sdc  | SDC timing constraints which depends on the [FO4 value](#fo4-calculation) for the target process.                                                        |
 | floorplan.idf.json   | [IDF Floorplan](https://docs.google.com/document/d/1rIB81hEOSNs2F1pIF6WbIwSNe-8HbfEtZRlaMFKdhKk/edit?usp=sharing) constraints file.                      |
+| harden_me.v          | Additional design file that contains blocks that are intended to be hardened for correct quality-of-results (requires additional setup).                 |
 | macro_generate.py    | Used to call macro generators for the target process (requires additional setup).                                                                        |
 | pickled.v            | Main design RTL file that has been pickled into a single .v file.                                                                                        |
-| hard/harden_me.v     | Additional design file that contains blocks that are intended to be hardened for correct quality-of-results (requires additional setup).                 |
 
 ## Design Usage
 
@@ -66,10 +65,10 @@ intention of this script is to read the IDF Floorplan file and use that info to 
 are process specific therefore the user is required to setup the script to shell out the correct commands. A small amount of
 framework has been implemented in _macro_generate.py_ however it is up to the user to get the generators operational.
 
-### Harened Verilog Model (_hard/harden_me.v_)
+### Harened Verilog Model (_harden_me.v_)
 
 In-order to instantiate hardened blocks they must be instantiated properly in the RTL. This will be done inside
-`hard/harden_me.v`. This file contains a collection of modules with synthesizable RTL models that are intended to
+`harden_me.v`. This file contains a collection of modules with synthesizable RTL models that are intended to
 be replaced with the hardened instance (either a macro or pre-synthesized netlist). The user should use the RTL
 model to ensure that the semantics of the hardened block match what the design expects.
 
