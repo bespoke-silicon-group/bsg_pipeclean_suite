@@ -4,7 +4,7 @@
 # variable called FO4 that is equal to the fan-out-of-4 value for the process.
 #
 
-create_clock [get_ports clk_i]  -name CLK  -period [expr 100*$::env(FO4)]
+create_clock [get_ports clk_i]  -name CLK  -period [expr 48*$::env(FO4)]
 
 set_input_delay -clock CLK  -max [expr 10*$::env(FO4)]  [get_ports reset_i]
 set_input_delay -clock CLK  -min 0  [get_ports reset_i]
