@@ -28,6 +28,7 @@ provided by the [BSG IDF Tools](https://github.com/bespoke-silicon-group/bsg_idf
 | black_parrot_fe_only_2019_03_11 | Front-end of a 64-bit RISC-V Core with Cache Coherence Directory | ~20K            |
 | black_parrot_be_only_2019_03_11 | Back-end of a 64-bit RISC-V Core with Cache Coherence Directory  | ~35K            |
 | black_parrot_2019_03_11         | Full 64-bit RISC-V Core with Cache Coherence Directory           | ~125K           |
+| black_parrot_2019_03_28         | Full 64-bit RISC-V Core with Cache Coherence Directory           | ~65K            |
 
 ## Design Structure
 
