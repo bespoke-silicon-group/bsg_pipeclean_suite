@@ -36,23 +36,23 @@ module hard_mem_1rw_bit_mask_d64_w15_wrapper #( parameter width_p = 15
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
-  reg [els_p-1:0][width_p-1:0] mem;
+  reg [width_p-1:0] mem [els_p-1:0];
   int i;
+
   always @(posedge clk_i)
-    if (v_i)
-      begin
-         if (w_i)
-           begin
-             for (i = 0; i < width_p; i=i+1)
-               if (w_mask_i[i])
-                 mem[addr_i][i] <= data_i[i];
-           end
-         else
-           begin
-             addr_r <= addr_i;
-           end
-      end
+    if (v_i & ~w_i)
+      addr_r <= addr_i;
+    else
+      addr_r <= 'X;
+
   assign data_o = mem[addr_r];
+
+  always @(posedge clk_i)
+    if (v_i & w_i)
+      for (i = 0; i < width_p; i=i+1)
+        if (w_mask_i[i])
+          mem[addr_i][i] <= data_i[i];
+
 
   // END SYNTHESIZABLE RTL MODEL
 
@@ -96,23 +96,22 @@ module hard_mem_1rw_bit_mask_d64_w96_wrapper #( parameter width_p = 96
 
   wire unused = reset_i;
   reg [addr_width_lp-1:0] addr_r;
-  reg [els_p-1:0][width_p-1:0] mem;
+  reg [width_p-1:0] mem [els_p-1:0];
   int i;
+
   always @(posedge clk_i)
-    if (v_i)
-      begin
-         if (w_i)
-           begin
-             for (i = 0; i < width_p; i=i+1)
-               if (w_mask_i[i])
-                 mem[addr_i][i] <= data_i[i];
-           end
-         else
-           begin
-             addr_r <= addr_i;
-           end
-      end
+    if (v_i & ~w_i)
+      addr_r <= addr_i;
+    else
+      addr_r <= 'X;
+
   assign data_o = mem[addr_r];
+
+  always @(posedge clk_i)
+    if (v_i & w_i)
+      for (i = 0; i < width_p; i=i+1)
+        if (w_mask_i[i])
+          mem[addr_i][i] <= data_i[i];
 
   // END SYNTHESIZABLE RTL MODEL
 
@@ -159,21 +158,20 @@ module hard_mem_1rw_byte_mask_d512_w64_wrapper #( parameter width_p = 64
   reg [addr_width_lp-1:0] addr_r;
   reg [width_p-1:0] mem [els_p-1:0];
   int i;
+
   always @(posedge clk_i)
-    if (v_i)
-      begin
-        if (w_i)
-          begin
-            for (i = 0; i < write_mask_width_lp; i=i+1)
-              if (write_mask_i[i])
-                mem[addr_i][(i*8)+:8] <= data_i[(i*8)+:8];
-          end
-        else
-          begin
-            addr_r <= addr_i;
-          end
-      end
+    if (v_i & ~w_i)
+      addr_r <= addr_i;
+    else
+      addr_r <= 'X;
+
   assign data_o = mem[addr_r];
+
+  always @(posedge clk_i)
+    if (v_i & w_i)
+      for (i = 0; i < write_mask_width_lp; i=i+1)
+        if (write_mask_i[i])
+          mem[addr_i][(i*8)+:8] <= data_i[(i*8)+:8];
 
   // END SYNTHESIZABLE RTL MODEL
   
